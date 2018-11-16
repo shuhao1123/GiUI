@@ -1,0 +1,289 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    line-height: 30px; font-family:-apple-system-font, "Helvetica Neue", sans-serif; font-size: 14px; background: #f8f8f8;padding-bottom: 15px;
+}
+// giui 整体默认背景颜色 和字体颜色
+@giui-bgcolor:#09a9a9;
+@giui-color:#09a9a9;
+@giui-color-888:#888;
+@giui-color-eee:#E5E5E5;
+a img{
+    border:0;
+}
+a{
+    color: #000;
+    text-decoration:none;
+}
+
+div{
+    box-sizing: border-box;
+}
+pre {
+    margin: 15px auto;
+    font: 12px/20px Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 1px solid #ddd;
+    border-left-width: 4px;
+    background: #fbfbfb url(https://www.runoob.com/images/codecolorer_bg.gif) top;
+    padding: 10px 15px;
+}
+.giui-hr{
+    height: 20px;
+    background: #fff;
+}
+// giui 左右内容填充
+.giui-padding{
+    padding: 0 15px;
+    background: #fff;
+}
+// giui 内容填充
+.giui-article{
+    padding: 20px 15px;
+    background: #fff;
+    .giui-title{
+        padding: 0;
+    }
+}
+.giui-list{
+    padding:0 15px;
+    background: #fff;
+    border-top: 1px solid @giui-color-eee;
+    border-bottom: 1px solid @giui-color-eee;
+}
+.giui-center{
+    text-align: center;
+}
+// giui 导航 宽度一样
+.giui-navbar{
+    display: flex; width: 100%; line-height: 50px; font-size: 15px; background:@giui-bgcolor; color: #fff;
+    div{
+        flex: 1;
+        text-align: center;
+    }
+}
+// giui 导航 两边宽度固定 中间内容自适应
+.giui-navbar-center{
+    .giui-navbar;
+    padding: 0 15px;
+    div:nth-child(1){
+        width: 50px;
+        flex: none;
+        text-align: left;
+    }
+    div:nth-child(3){
+        width: 50px;
+        flex: none;
+        text-align: right;
+    }
+}
+//giui 标题
+.giui-title{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    label{
+        color: @giui-color;
+        font-size: 16px;
+    }
+}
+// giui 标题 说明
+.giui-desc{
+    margin-top: 5px;
+    color: #888;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 15px;
+}
+// giui 九宫格
+.giui-grid{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        border-top: 1px solid #d9d9d9;
+    }
+    div{
+        width:25%;
+        float: left;
+        padding:10px;
+        position: relative;
+        p:nth-child(1){
+            height: 35px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-right: 1px solid #d9d9d9;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid #d9d9d9;
+        }
+    }
+    img{
+        width: 35px;
+    }
+}
+.giui-gird-3{
+    div{
+        width: 100%/3;
+    }
+    div:nth-of-type(3n):before{
+        border-right: 0px;
+    }
+}
+.giui-gird-4{
+    div{
+        width: 100%/4;
+    }
+    div:nth-of-type(4n):before{
+        border-right: 0px;
+    }
+}
+// giui 图标 左边小长方形
+.giui-icon_1{
+    width: 6px;height: 20px;display: inline-block;background: @giui-bgcolor; position: relative; top: 4px;margin-right: 5px;
+}
+
+// giui 图片介绍，左边图片宽度固定，右边文字自适应
+.giui-cells{
+    display: flex;
+    padding: 15px 0;
+    line-height: normal;
+    position: relative;
+    div:nth-of-type(2){
+        img{
+        padding-left: 10px;
+        }
+    }
+    .giui-cell_left{
+        width: 110px;
+        img{
+            width: 100px;
+            height: 75px;
+        }
+    }
+    .giui-cell_left2{
+        width: 90px;
+        img{
+            width: 80px;
+        }
+    }
+    .giui-cell_right{
+        flex: 1;
+        p{
+            // overflow: hidden;
+            // text-overflow:ellipsis;
+            // white-space: nowrap;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: 400;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden; 
+        }
+        h2{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 23px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        h3{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+            line-height: 23px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        h4{
+            font-size: 12px;
+            font-weight: 400;
+            color: @giui-color-888;
+            line-height: 20px;
+            margin-top: 5px;
+        }
+    }
+    .giui-gt{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 999;
+        margin-top: -10px;
+        color: @giui-color-888;
+    }
+    .giui-gt2{
+        position: absolute;
+        right: 0;
+    }
+}
+.giui-list .giui-cells{
+        border-bottom: 1px solid @giui-color-eee;
+}
+.giui-list .giui-cells:last-of-type{
+    border-bottom: none;
+}
+.giui-border{
+    border-top: 1px solid @giui-color-eee;
+    border-bottom: 1px solid @giui-color-eee;
+}
+.giui-oval{
+    padding-bottom: 10px;
+}
+.giui-oval span{
+    display: inline-block;
+    padding:3px 8px;
+    background:#e8f9f6;
+    margin-right:5px;
+    margin-top:5px;
+    border-radius:30px;
+    color:#40b4a1;
+    font-size: 12px;
+}
+
+.giui-btn{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    background: @giui-bgcolor;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.demo-title{
+    text-align: center;
+    font-size: 34px;
+    color: #3cc51f;
+    font-weight: 400;
+    margin: 0 15%;
+    padding: 60px 0;
+}

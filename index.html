@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GiUI</title>
+	<link href="./css/style.css" rel="stylesheet">
+	<link href="./css/giui.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="brand">
+		<div class="brand-content">
+			<h1>基础组件</h1>
+			<p>GiUI 包含了大量常用的组件：按钮，表单，列表，对话框等。这里的组件全部都是官方的样式。</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="container-left">
+			<ul>
+				<li><a href="#navbar">NavBar</a></li>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#list">文章列表</a></li>
+				<li><a href="#button_1">按钮</a></li>
+			</ul>
+		</div>
+		<div class="container-right">
+			<div class="device">
+				<div class="status-bar"></div>
+				<div class="window">
+					<iframe src="navbar.html" width="320" height="549" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="container-middle">
+			<article>
+				<h2 id="navbar">NavBar</h2>
+				<h5>因为微信本身就有一个顶部的标题栏，所以这个导航栏其实是在标题栏之下的二级导航栏，因此它实际上就是一个放在页面顶部的 tabbar 而已。(改成giui-navbar每一个子元素的宽度将相等)</h5>
+				<pre>
+	<div class="giui-navbar-center">
+		<div>返回</div>
+		<div>NavBar</div>
+		<div>>></div>
+	</div>	
+</pre>
+			</article>
+			<article>
+				<h2 id="grid">Grid</h2>
+				<h5>九宫格（giui-gird-3为三列，giui-gird-4为四列）</h5>
+				<pre>
+	<div class="giui-grid giui-gird-3">
+		<div>
+			<p>
+				<img src="http://jqweui.com/dist/demos/images/icon_nav_button.png">
+			</p>
+			<p>gird1</p>
+		</div>
+		<div>
+			<p>
+				<img src="http://jqweui.com/dist/demos/images/icon_nav_cell.png">
+			</p>
+			<p>gird2</p>
+		</div>
+		...
+	</div>
+</pre>
+			</article>
+			<article>
+				<h2 id="list">文章列表</h2>
+				<pre>
+	<div class="giui-list">
+		<div class="giui-cells">
+			<div class="giui-cell_left">
+				<img src="images/index_01.png">
+			</div>
+			<div class="giui-cell_right">
+				<p>上海某某某公司</p>
+				<h4>地址：上海虹口区</h4>
+				<h4>电话：177-8888-8888</h4>
+			</div>
+			<span class="giui-gt">></span>
+		</div>
+		...
+	</div>
+
+	<div class="giui-list">
+		<div class="giui-cells">
+			<div class="giui-cell_right">
+				<h2>文章标题</h2>
+				<h4>2018年8月3日</h4>
+			</div>
+			<div class="giui-cell_left">
+				<img src="images/index_01.png">
+			</div>
+		</div>
+		...
+	</div>
+
+	<div class="giui-list">
+		<div class="giui-cells">
+			<div class="giui-cell_left2">
+				<img src="images/boy.jpg">
+			</div>
+			<div class="giui-cell_right">
+				<h1>姓名</h1>
+				<div class="giui-oval">
+					<span>北京</span>
+					<span>口腔科</span>
+					<span>副主任医师</span>
+				</div>
+				<h2>个人简介</h2>
+			</div>
+		</div>
+		...
+	</div>
+</pre>
+			</article>
+			<article>
+				<h2 id="button_1">按钮</h2>
+				<pre>
+	<div class="giui-article">
+		<a href="#" class="giui-btn">返回首页</a>
+	</div>
+</pre>
+			</article>
+		</div>
+	</div>
+	<script src="./js/jquery-2.1.4.js"></script>
+	<script src="./js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    line-height: 30px; font-family:-apple-system-font, "Helvetica Neue", sans-serif; font-size: 14px; background: #f8f8f8;padding-bottom: 15px;
+}
+li{
+    list-style-type: none;
+}
+.active a{
+    color: #2a7ae2;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 24px;
+}
+h3{
+    font-size: 16px;
+}
+h4{
+    font-size: 14px;
+}
+h5{
+    line-height: 25px;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.device-fixed{
+    position: fixed;
+}
+.brand{
+    background: #f4f4f4;
+    color: #555;
+    padding: 60px 0;
+    .brand-content{
+        max-width: 1400px;
+        margin: auto;
+    }
+    p{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+.container{
+    max-width: 1400px;
+    min-width: 1000px;
+    margin: 60px auto; 
+    // display: table;
+    &::before{
+        display: table;
+        content: ""
+    }
+    .container-left{
+        width: 150px;
+        float: left;
+        a{
+            display: block;
+        }
+    }
+    .container-right{
+        width: 440px;
+        float: right;
+        .device{
+            background-image: url(http://jqweui.com/assets/img/device-sprite.png);
+            background-repeat: no-repeat;
+            width: 395px;
+            height: 813px;
+            background-position: -395px 0;
+            background-size: 300%;
+            margin-left: 20px;
+            position: relative;
+        }
+        .device-fixed{
+            position: fixed;
+            top: 0;
+        }
+        .status-bar {
+            height: 20px;
+            width: 320px;
+            background: url(http://jqweui.com/assets/img/status-bar.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            top: 117px;
+            position: absolute;
+            z-index: 99;
+            left: 37px;
+        }
+        .window {
+            position: absolute;
+            top: 137px;
+            left: 37px;
+            width: 321px;
+            height: 549px;
+            overflow: hidden;
+            font-size: .85rem;
+            line-height: 1.05rem;
+            background: #fbfbfb;
+        }
+    }
+    .container-middle{
+        margin: -20px 440px 0 150px;
+        h2{
+            color: #660066;
+            font-weight: 500;
+            font-size: 24px;
+            margin: 10px 0;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
